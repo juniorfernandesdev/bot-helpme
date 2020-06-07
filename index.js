@@ -3,17 +3,17 @@ const bot = new Discord.Client();
 
 const config = require('./config.json');
 const links = require('./links.json');
-const salas = require('./links.json');
+const salas = require('./salas.json');
 
 // welcome message for user
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get(salas.geral).send('Seja bem-vindo ' + member.user.username + ', leia atentamente as regras do servidor, e caso tenho alguma segestão, pode falar com um de nossos moderadores, pois sua sugestão é bem vinda.');
+    member.guild.channels.cache.get(salas.bemvindo).send("Seja bem-vinde " + member.user.username + "!  🎉  🎊  👏 \n 🔴 Leia atentamente as regras do servidor no canal de texto #regras, e caso tenho alguma segestão, pode falar com um de nossos moderadores.\nSua sugestão é muito bem vinda! 😄 😄 😄");
     member.send('Bem vindo ao servidor!');
 });
 
 // Remove message for user
 bot.on('guildMemberRemove', member => {
-    member.guild.channels.get(salas.geral).send('Uma pena que foi se foi ' + member.user.username + ' :/');
+    member.guild.channels.cache.get(salas.bemvindo).send("Uma pena que vc se foi " + member.user.username + " 😞");
 });
 
 bot
