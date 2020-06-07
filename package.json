@@ -1,0 +1,10 @@
+{
+  "name": "boot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Junior Fernandes",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
